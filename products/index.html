@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Collection — IMPERIA Maison Florale</title>
+<meta name="description" content="The IMPERIA collection — seasonal bouquets, bridal florals, arrangements, and weekly subscriptions." />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28' font-family='Georgia' font-style='italic' fill='%238a3327'%3EI%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo" aria-label="IMPERIA home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M12 2c2 3 2 6 0 9-2-3-2-6 0-9zM12 22c-2-3-2-6 0-9 2 3 2 6 0 9zM2 12c3-2 6-2 9 0-3 2-6 2-9 0zM22 12c-3 2-6 2-9 0 3-2 6-2 9 0z"/>
+      <circle cx="12" cy="12" r="1.3" fill="currentColor"/>
+    </svg>
+    IMPERIA
+  </a>
+  <div class="nav-panel" id="navPanel">
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="/">Atelier</a>
+      <a class="nav-link active" href="/products">Collection</a>
+      <a class="nav-link" href="/contact">Visit</a>
+      <a class="nav-link" href="/#journal">Journal</a>
+    </div>
+    <div class="nav-extras">
+      <a class="nav-extra-cta" href="/contact">
+        Commission a piece
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h17M14 1l4 4-4 4"/></svg>
+      </a>
+      <svg class="nav-extra-ornament" viewBox="0 0 120 24" fill="none">
+        <path d="M2 12h36" stroke-linecap="round"/>
+        <circle cx="46" cy="12" r="2"/>
+        <path d="M52 12c4-5 8-5 12 0-4 5-8 5-12 0z"/>
+        <circle cx="74" cy="12" r="2"/>
+        <path d="M82 12h36" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-extra-grid">
+        <div class="nav-extra-block">
+          <h5>The Atelier</h5>
+          <p>Auguststraße 47<br/>10119 Berlin · Mitte</p>
+        </div>
+        <div class="nav-extra-block">
+          <h5>Hours</h5>
+          <p>Wed–Fri · 10–19<br/>Sat · 09–19<br/>Sun · 11–16</p>
+        </div>
+        <div class="nav-extra-block">
+          <h5>Conversation</h5>
+          <p>atelier@imperia.flowers<br/>+49 (0)30 4419 0072</p>
+        </div>
+      </div>
+      <div class="nav-extra-socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M11 6c4 0 6 2 6 5 0 3-2 5-4 5-1 0-2-0.5-2-1.5l-1 4-1 1"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4v8.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 4c0 2 1.5 4 4 4"/></svg></a>
+        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <a class="nav-cta" href="/contact">Compose →</a>
+  <div class="nav-burger" id="navBurger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- ============================ PAGE HEADER ============================ -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <div class="page-eyebrow">Volume IX · Spring / Summer · MMXXVI</div>
+      <h1 class="display page-title">The <em>Collection</em></h1>
+    </div>
+    <p class="page-intro">
+      Twenty-four compositions, hand-tied in our Mitte studio and delivered the same
+      day across Berlin. Each piece sits in season for the briefest moment — we
+      replace the catalogue every six weeks as the gardens turn.
+    </p>
+  </div>
+</header>
+
+<!-- ============================ FILTERS ============================ -->
+<div class="filters">
+  <div class="filters-inner">
+    <button class="filter active" data-filter="all">All <span class="filter-count">24</span></button>
+    <button class="filter" data-filter="bouquets">Bouquets <span class="filter-count">09</span></button>
+    <button class="filter" data-filter="arrangements">Arrangements <span class="filter-count">06</span></button>
+    <button class="filter" data-filter="bridal">Bridal <span class="filter-count">05</span></button>
+    <button class="filter" data-filter="subscription">Subscription <span class="filter-count">03</span></button>
+    <button class="filter" data-filter="limited">Limited <span class="filter-count">04</span></button>
+    <div class="filters-sort">
+      Sorted by &nbsp;
+      <select aria-label="Sort">
+        <option>seasonal favourites</option>
+        <option>price · ascending</option>
+        <option>price · descending</option>
+        <option>newest first</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ PRODUCTS ============================ -->
+<section class="products-page">
+  <div class="products-page-inner">
+    <div class="grid-products" id="productsGrid">
+
+      <a class="product" data-cat="bouquets" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 01</span>
+          <span class="product-tag">New</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=1200&q=80" alt="Aurelia"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Aurelia</span>
+          <span class="product-price">€ 86</span>
+          <span class="product-latin">Paeonia · Rosa centifolia · Astilbe</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="arrangements" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 02</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1200&q=80" alt="Vesper"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Vesper</span>
+          <span class="product-price">€ 72</span>
+          <span class="product-latin">Dahlia 'Karma Choc' · Scabiosa · Hellebore</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bridal" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 03</span>
+          <span class="product-tag">Bridal</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1200&q=80" alt="Solenne"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Solenne</span>
+          <span class="product-price">€ 94</span>
+          <span class="product-latin">Paeonia lactiflora · Lisianthus · Eucalyptus</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bouquets" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 04</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1200&q=80" alt="Eden Wild"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Eden Wild</span>
+          <span class="product-price">€ 48</span>
+          <span class="product-latin">Achillea · Cosmos · Bupleurum · Phlox</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="arrangements limited" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 05</span>
+          <span class="product-tag">Limited</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?auto=format&fit=crop&w=1200&q=80" alt="Camellia Noir"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Camellia Noir</span>
+          <span class="product-price">€ 98</span>
+          <span class="product-latin">Camellia japonica · Anemone 'Mona Lisa' · Ivy</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bouquets" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 06</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1200&q=80" alt="Provence"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Provence</span>
+          <span class="product-price">€ 44</span>
+          <span class="product-latin">Lavandula · Rosmarinus · Salvia · Limonium</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bouquets subscription" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 07</span>
+          <span class="product-tag">Subscription</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=1200&q=80" alt="Marguerite — daisies and chamomile"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Marguerite</span>
+          <span class="product-price">€ 52 / wk</span>
+          <span class="product-latin">Leucanthemum · Matricaria · Avena</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="arrangements" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 08</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?auto=format&fit=crop&w=1200&q=80" alt="Hortensia — blue hydrangeas"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Hortensia</span>
+          <span class="product-price">€ 68</span>
+          <span class="product-latin">Hydrangea macrophylla · Delphinium</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bouquets" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 09</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80" alt="Bohème — eclectic garden bouquet"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Bohème</span>
+          <span class="product-price">€ 58</span>
+          <span class="product-latin">Cosmos · Zinnia · Nigella · Daucus</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="bridal limited" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 10</span>
+          <span class="product-tag">Limited</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?auto=format&fit=crop&w=1200&q=80" alt="Garance — bridal cascade"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Garance</span>
+          <span class="product-price">€ 142</span>
+          <span class="product-latin">Rosa 'Garance' · Astrantia · Smilax</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="arrangements" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 11</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?auto=format&fit=crop&w=1200&q=80" alt="Ophélie — pale, watery palette"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">Ophélie</span>
+          <span class="product-price">€ 76</span>
+          <span class="product-latin">Anemone · Ranunculus · Clematis</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+      <a class="product" data-cat="subscription" href="#">
+        <div class="product-frame">
+          <span class="product-num">№ 12</span>
+          <span class="product-tag">Subscription</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=1200&q=80" alt="La Petite — small weekly arrangement"/>
+        </div>
+        <div class="product-info">
+          <span class="product-name">La Petite</span>
+          <span class="product-price">€ 32 / wk</span>
+          <span class="product-latin">Florist's choice · in season</span>
+          <span class="product-cta">Compose this <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Compose your own block -->
+    <div class="poster reveal" style="margin-top: clamp(80px, 10vw, 140px);">
+      <div class="poster-img" style="background-image:url('https://images.unsplash.com/photo-1454425064867-83a3ddc4496c?auto=format&fit=crop&w=2200&q=80');"></div>
+      <div class="poster-body">
+        <div class="poster-eyebrow">Bespoke · By Commission</div>
+        <h2 class="poster-title">
+          Or <em>compose</em> your own —<br/>
+          our florist will write back within an hour.
+        </h2>
+        <div class="poster-actions">
+          <a class="btn" href="/contact">Start a commission <span class="arrow">→</span></a>
+          <a class="btn" href="/contact">Book a consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Im<em>p</em>eria</div>
+        <p class="footer-tagline">Maison Florale · botanical compositions composed with patience, delivered with care.</p>
+        <div class="footer-socials">
+          <a class="social-link" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+          <a class="social-link" href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M11 6c4 0 6 2 6 5 0 3-2 5-4 5-1 0-2-0.5-2-1.5l-1 4-1 1"/></svg></a>
+          <a class="social-link" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4v8.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 4c0 2 1.5 4 4 4"/></svg></a>
+          <a class="social-link" href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>The House</h4>
+        <ul>
+          <li><a href="/">Atelier</a></li>
+          <li><a href="/products">Collection</a></li>
+          <li><a href="/contact">Visit</a></li>
+          <li><a href="/#journal">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/contact">Weddings</a></li>
+          <li><a href="/products">Subscription</a></li>
+          <li><a href="/contact">Events</a></li>
+          <li><a href="/contact">Workshops</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <p class="footer-info">
+          Auguststraße 47<br/>
+          10119 Berlin, Mitte<br/><br/>
+          Wed – Sat · 10 – 19<br/>
+          Sun · 11 – 16<br/><br/>
+          +49 (0)30 4419 0072<br/>
+          atelier@imperia.flowers
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2014–2026 Imperia Maison Florale GmbH</span>
+      <div class="footer-imprint-links">
+        <a href="/imprint">Imprint</a>
+        <a href="/imprint#privacy">Privacy</a>
+        <a href="/imprint#terms">Terms</a>
+        <a href="/imprint#shipping">Shipping &amp; Returns</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

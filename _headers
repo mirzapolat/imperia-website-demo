@@ -1,0 +1,27 @@
+# Security & caching headers for Cloudflare Pages / Netlify.
+# Cloudflare Pages and Netlify both read this file at the project root.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://images.unsplash.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests
+
+# Long-lived caching for static assets (CSS/JS/images).
+# When you change these, purge the CDN cache from the dashboard.
+/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+# Always re-check HTML so deploys are immediate.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

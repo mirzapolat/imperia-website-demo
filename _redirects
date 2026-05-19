@@ -1,0 +1,13 @@
+# Clean-URL redirects for Cloudflare Pages / Netlify.
+# Forces canonical URLs without .html and without trailing slashes.
+
+# Strip .html from old bookmarks / external links
+/index.html             /                301
+/products.html          /products         301
+/contact.html           /contact          301
+/imprint.html           /imprint          301
+
+# Strip trailing slashes for canonical URLs
+/products/              /products         301
+/contact/               /contact          301
+/imprint/               /imprint          301
