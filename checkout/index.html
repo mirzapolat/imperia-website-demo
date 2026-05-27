@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — IMPERIA Maison Florale</title>
+<meta name="description" content="Complete your IMPERIA order — delivery, billing, and a hand-written note." />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28' font-family='Georgia' font-style='italic' fill='%238a3327'%3EI%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo" aria-label="IMPERIA home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M12 2c2 3 2 6 0 9-2-3-2-6 0-9zM12 22c-2-3-2-6 0-9 2 3 2 6 0 9zM2 12c3-2 6-2 9 0-3 2-6 2-9 0zM22 12c-3 2-6 2-9 0 3-2 6-2 9 0z"/>
+      <circle cx="12" cy="12" r="1.3" fill="currentColor"/>
+    </svg>
+    IMPERIA
+  </a>
+  <div class="nav-panel" id="navPanel">
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="/">Atelier</a>
+      <a class="nav-link" href="/products/">Collection</a>
+      <a class="nav-link" href="/contact/">Visit</a>
+      <a class="nav-link" href="/#journal">Journal</a>
+    </div>
+    <div class="nav-extras">
+      <a class="nav-extra-cta" href="/products/">
+        Compose a bouquet
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h17M14 1l4 4-4 4"/></svg>
+      </a>
+      <svg class="nav-extra-ornament" viewBox="0 0 120 24" fill="none">
+        <path d="M2 12h36" stroke-linecap="round"/>
+        <circle cx="46" cy="12" r="2"/>
+        <path d="M52 12c4-5 8-5 12 0-4 5-8 5-12 0z"/>
+        <circle cx="74" cy="12" r="2"/>
+        <path d="M82 12h36" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-extra-grid">
+        <div class="nav-extra-block"><h5>The Atelier</h5><p>Auguststraße 47<br/>10119 Berlin · Mitte</p></div>
+        <div class="nav-extra-block"><h5>Hours</h5><p>Wed–Fri · 10–19<br/>Sat · 09–19<br/>Sun · 11–16</p></div>
+        <div class="nav-extra-block"><h5>Conversation</h5><p>atelier@imperia.flowers<br/>+49 (0)30 4419 0072</p></div>
+      </div>
+      <div class="nav-extra-socials">
+        <a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+        <a href="https://www.pinterest.com/" aria-label="Pinterest" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M11 6c4 0 6 2 6 5 0 3-2 5-4 5-1 0-2-0.5-2-1.5l-1 4-1 1"/></svg></a>
+        <a href="https://www.tiktok.com/" aria-label="TikTok" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4v8.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 4c0 2 1.5 4 4 4"/></svg></a>
+        <a href="mailto:atelier@imperia.flowers" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <a class="nav-cta" href="/products/">Compose →</a>
+  <div class="nav-burger" id="navBurger"><span></span><span></span><span></span></div>
+</nav>
+
+<main class="checkout-page">
+  <header class="checkout-head">
+    <div class="page-eyebrow">Step · final — your details</div>
+    <h1 class="display checkout-title">The <em>checkout</em></h1>
+  </header>
+
+  <!-- Empty state — shown when cart is empty -->
+  <div class="checkout-empty" id="checkoutEmpty" hidden>
+    <h2>Your basket is <em>empty</em>.</h2>
+    <p>The collection is just through here — twenty-four compositions, hand-tied in our Mitte studio.</p>
+    <a class="btn btn-primary" href="/products/">Browse the collection <span class="arrow">→</span></a>
+  </div>
+
+  <!-- Cart-bearing checkout grid -->
+  <div class="checkout-grid" id="checkoutGrid">
+
+    <!-- LEFT — form -->
+    <form class="checkout-form" id="checkoutForm" novalidate>
+
+      <section class="checkout-section">
+        <div class="checkout-section-head">
+          <span class="checkout-section-num">i.</span>
+          <h2>Your details</h2>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text" autocomplete="given-name" required/>
+          </div>
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text" autocomplete="family-name" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required/>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+49 …"/>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="checkout-section-head">
+          <span class="checkout-section-num">ii.</span>
+          <h2>Delivery</h2>
+        </div>
+        <div class="form-row">
+          <div class="field field-full">
+            <label for="recipient">Recipient (if different)</label>
+            <input id="recipient" name="recipient" type="text" autocomplete="name" placeholder="leave blank to send to yourself"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field field-full">
+            <label for="addr1">Street &amp; number</label>
+            <input id="addr1" name="addr1" type="text" autocomplete="address-line1" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="addr2">Apartment, floor (optional)</label>
+            <input id="addr2" name="addr2" type="text" autocomplete="address-line2"/>
+          </div>
+          <div class="field">
+            <label for="postcode">Postal code</label>
+            <input id="postcode" name="postcode" type="text" autocomplete="postal-code" inputmode="numeric" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" value="Berlin" required/>
+          </div>
+          <div class="field">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+              <option value="DE">Germany</option>
+              <option value="AT">Austria</option>
+              <option value="CH">Switzerland</option>
+              <option value="NL">Netherlands</option>
+              <option value="FR">France</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="deliveryDate">Delivery date</label>
+            <input id="deliveryDate" name="deliveryDate" type="date" required/>
+          </div>
+          <div class="field">
+            <label for="window">Delivery window</label>
+            <select id="window" name="window">
+              <option>11 – 14h</option>
+              <option>14 – 17h</option>
+              <option>17 – 19h</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field field-full">
+            <label for="giftNote">A note for the recipient <span class="italic" style="color:var(--ink-mute); font-size: 0.85em;">— hand-written, complimentary</span></label>
+            <textarea id="giftNote" name="giftNote" placeholder="A line or two. We'll write it in our own hand." maxlength="240"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="checkout-section-head">
+          <span class="checkout-section-num">iii.</span>
+          <h2>Payment</h2>
+        </div>
+        <p style="color: var(--ink-soft); font-style: italic; font-size: 15px; margin-bottom: 18px;">
+          This is a demonstration site — no card is charged, no real payment is taken.
+          Pick a method below and place the order to see the confirmation flow.
+        </p>
+        <div class="form-row">
+          <div class="field field-full">
+            <label for="payMethod">Method</label>
+            <select id="payMethod" name="payMethod">
+              <option value="card">Visa / Mastercard · ending in 4242</option>
+              <option value="sepa">SEPA direct debit</option>
+              <option value="paypal">PayPal</option>
+              <option value="apple">Apple Pay</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="checkout-actions">
+        <p class="form-note">
+          By placing the order you agree to our <a href="/imprint/#terms" style="text-decoration: underline; text-underline-offset: 4px;">terms</a>
+          and confirm you have read our <a href="/imprint/#privacy" style="text-decoration: underline; text-underline-offset: 4px;">privacy notice</a>.
+        </p>
+        <button type="submit" class="btn btn-primary checkout-place" id="placeBtn">
+          Place order <span class="arrow">→</span>
+        </button>
+      </div>
+    </form>
+
+    <!-- RIGHT — order summary -->
+    <aside class="checkout-summary" aria-label="Order summary">
+      <div class="checkout-summary-title">Your <em>composition</em></div>
+      <div class="checkout-lines" id="checkoutLines"></div>
+      <div class="checkout-totals" id="checkoutTotals"></div>
+      <div class="checkout-promise">
+        Every stem is hand-tied to order in our Mitte studio and delivered the same day across Berlin
+        for orders placed before 14:00. We guarantee seven days of freshness.
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">Im<em>p</em>eria</div>
+        <p class="footer-tagline">Maison Florale · botanical compositions composed with patience, delivered with care.</p>
+        <div class="footer-socials">
+          <a class="social-link" href="https://www.instagram.com/" aria-label="Instagram" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+          <a class="social-link" href="https://www.pinterest.com/" aria-label="Pinterest" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M11 6c4 0 6 2 6 5 0 3-2 5-4 5-1 0-2-0.5-2-1.5l-1 4-1 1"/></svg></a>
+          <a class="social-link" href="https://www.tiktok.com/" aria-label="TikTok" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 4v8.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 4c0 2 1.5 4 4 4"/></svg></a>
+          <a class="social-link" href="mailto:atelier@imperia.flowers" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div><h4>The House</h4><ul><li><a href="/">Atelier</a></li><li><a href="/products/">Collection</a></li><li><a href="/contact/">Visit</a></li><li><a href="/#journal">Journal</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="/contact/">Weddings</a></li><li><a href="/products/">Subscription</a></li><li><a href="/contact/">Events</a></li><li><a href="/contact/">Workshops</a></li></ul></div>
+      <div><h4>Studio</h4><p class="footer-info">Auguststraße 47<br/>10119 Berlin, Mitte<br/><br/>Wed – Sat · 10 – 19<br/>Sun · 11 – 16<br/><br/>+49 (0)30 4419 0072<br/>atelier@imperia.flowers</p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2014–2026 Imperia Maison Florale GmbH</span>
+      <div class="footer-imprint-links">
+        <a href="/imprint/">Imprint</a><a href="/imprint/#privacy">Privacy</a><a href="/imprint/#terms">Terms</a><a href="/imprint/#shipping">Shipping &amp; Returns</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/checkout/checkout.js"></script>
+</body>
+</html>

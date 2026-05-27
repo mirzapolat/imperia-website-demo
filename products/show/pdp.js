@@ -284,7 +284,7 @@
   related.forEach(([k, r]) => {
     const a = document.createElement('a');
     a.className = 'product';
-    a.href = '/products/show?p=' + k;
+    a.href = '/products/show/?p=' + k;
 
     const frame = document.createElement('div');
     frame.className = 'product-frame';
@@ -375,9 +375,29 @@
                      : state.vessel === 'glass' ? 'glass cylinder'
                      : 'ceramic urn';
     const sizeWord = state.size[0].toUpperCase() + state.size.slice(1);
+    const unitPrice = Math.round(p.basePrice * SIZE_LABELS[state.size].mult + state.vesselAdd);
+    const note = (document.getElementById('noteText')?.value || '').trim();
+
+    if (window.imperiaCart) {
+      window.imperiaCart.add({
+        slug,
+        name: p.name,
+        image: p.image,
+        size: state.size,
+        vessel: state.vessel,
+        note,
+        unitPrice,
+        qty: state.qty,
+      });
+    }
+
     toastMsg.textContent = `${p.name} · ${sizeWord}, ${vesselWord} · ${fmtPrice(calcTotal())}`;
     toast.classList.add('show');
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3600);
+
+    if (window.imperiaCart) {
+      setTimeout(() => window.imperiaCart.open(), 380);
+    }
   });
 })();
